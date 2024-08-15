@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My blog.",
+  "packageManager": "pnpm@9.7.1",
+  "author": "xieshuang",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "clean": "rimraf node_modules **/*/node_modules",
+    "clean2": "rm -rf node_modules **/*/node_modules",
+    "build": "pnpm -r build",
+    "format": "prettier --write \"packages/**/*.@(ts|js|vue)\"",
+    "lint": "pnpm -r lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalldie/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shalldie/blog/issues"
+  },
+  "homepage": "https://github.com/shalldie/blog#readme",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1"
+  }
+}

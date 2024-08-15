@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "name": "blog",
+            "path": "."
+        },
+        {
+            "name": "server",
+            "path": "packages/server"
+        },
+        {
+            "name": "client",
+            "path": "packages/client"
+        }
+    ]
+}
