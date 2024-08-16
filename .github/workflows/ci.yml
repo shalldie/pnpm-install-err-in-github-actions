@@ -27,15 +27,13 @@ jobs:
         with:
           path: blog
 
-      # pnpm 设置、缓存
+      # install pnpm
       - name: Install pnpm 📂
         uses: pnpm/action-setup@v4
         with:
-          # version: 9
           package_json_file: "blog/package.json"
-          # dest: "${{github.workspace}}/pnpm-store"
 
-      # 准备node环境
+      # install node
       - name: Use Node.js 🐼
         uses: actions/setup-node@v4
         with:
@@ -43,8 +41,8 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: "**/pnpm-lock.yaml"
 
-      # blog 进行打包、清理
-      - name: Build blog 🚀
+      # pnpm install
+      - name: pnpm install
         run: |
-          # blog 构建
-          bash $GITHUB_WORKSPACE/blog/scripts/build.sh
+          cd $GITHUB_WORKSPACE/blog
+          pnpm install
